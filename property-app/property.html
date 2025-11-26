@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Property</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = {darkMode:'class'}</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 p-8">
+<h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">Add Property</h1>
+<form id="propertyForm" class="grid gap-4 max-w-2xl">
+<input id="propertyName" type="text" placeholder="Property Name" class="p-2 border rounded dark:bg-gray-700" required>
+<input id="destination" type="text" placeholder="Destination" class="p-2 border rounded dark:bg-gray-700">
+<input type="file" id="image" class="p-2 border rounded dark:bg-gray-700">
+<div id="floorContainer"></div>
+<button type="button" id="addFloor" class="p-2 bg-green-600 text-white rounded">Add Floor</button>
+<div id="map" class="h-64 mt-4"></div>
+<button type="submit" class="p-2 bg-orange-500 text-white rounded mt-4">Submit Property</button>
+</form>
+<script type="module" src="app.js"></script>
+</body>
+</html>
